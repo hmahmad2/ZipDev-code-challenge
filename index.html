@@ -5,11 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="js/app.js"></script>
+    
 
     <title>JS Code Challenge</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <script src="js/app.js"></script>
+    <h1>ZipDev Coding Challenge</h1>
+
+    <form>
+        <label>
+            How do you describe yourself as a developer?
+            <select id="formOne">
+                <option value="hermit" selected="selected">Hermit</option>
+                <option value="sociable">Sociable</option>
+                <option value="serious">Serious</option>
+                <option value="grumpy">Grumpy</option>
+                <option value="doNotKnow">do not know yet</option>
+            </select>
+        </label>
+        <!-- <input type="submit" value="Submit" onclick="questionOne()" /> -->
+    </form>
+    <!-- Putting the submit button outside the form allows
+        the answer to persist and not go away in a split second -->
+    <input type="submit" value="Submit" onclick="questionOne(), questionLast()" />
+
+    <p id=testAnswer1></p>
+    <p id=testAnswer2></p>
+    <p id=testAnswer3></p>
+
 </body>
 </html>
