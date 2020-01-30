@@ -24,13 +24,29 @@
                 <option value="doNotKnow">do not know yet</option>
             </select>
         </label>
+        <br />
+        <br />
+        <label>
+            Select the Javascript based technologies.
+            <select id="formTwo">
+                <option value="angular" selected="selected">AngularJS</option>
+                <option value="ember">Ember</option>
+                <option value="vue">VueJS</option>
+                <option value="java">Java</option>
+                <option value="csharp">C#</option>
+            </select>
+        </label>
         <!-- <input type="submit" value="Submit" onclick="questionOne()" /> -->
+        
     </form>
     <!-- Putting the submit button outside the form allows
         the answer to persist and not go away in a split second -->
-    <input type="submit" value="Submit" onclick="questionOne(), questionLast()" />
+    <input type="submit" value="Submit" onclick="questionOne(), questionTwo()" />
 
-    <p id=testAnswer1></p>
+    <br />
+    <br />
+    <span id=testAnswer1></span>
+    <br />
     <p id=testAnswer2></p>
     <p id=testAnswer3></p>
 
