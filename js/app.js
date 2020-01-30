@@ -25,6 +25,9 @@ function questionTwo() {
     var w = e.options[e.selectedIndex];
     fTwo = w;
     document.getElementById("testAnswer2").innerHTML = fTwo.text;
+    if (fTwo.value === "angular" || fTwo.value === "vue") {
+        document.getElementById("testAnswer2").innerHTML += "  &#10004";
+    }
     console.log(fTwo.text)
 }
 
