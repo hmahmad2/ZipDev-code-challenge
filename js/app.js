@@ -31,6 +31,10 @@ function questionTwo() {
     console.log(fTwo.text)
 }
 
+function questionThree() {
+    var e = document.getElementById("formThree");
+}
+
 // console.log(fOne);
 
 // function questionLast() {
