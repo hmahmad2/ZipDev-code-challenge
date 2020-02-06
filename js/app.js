@@ -3,6 +3,32 @@ var fTwo;
 var fThree;
 var fFour;
 
+var countOne = 10;
+var countTwo = 20;
+var interval1 = setInterval(function() {
+    document.getElementById("count1").innerHTML = countOne;
+    countOne--;
+    if (countOne <= -1) {
+        clearInterval(interval1);
+        document.getElementById("count1").innerHTML = 'Done';
+        var e = document.getElementById("formOne");
+        e.disabled = true;
+    }
+}, 1000);
+
+var interval2 = setInterval(function() {
+    if (countTwo <= 10) {
+        document.getElementById("count2").innerHTML = countTwo;
+    }
+    countTwo--;
+    if (countTwo <= -1) {
+        clearInterval(interval2);
+        document.getElementById("count2").innerHTML = 'Done';
+        var e = document.getElementById("formTwo");
+        e.disabled = true;
+    }
+}, 1000);
+
 
 function questionOne() {
     // fOne = document.forms["formOne"].value;
