@@ -33,6 +33,22 @@ function questionTwo() {
 
 function questionThree() {
     var e = document.getElementById("formThree");
+    // var w = e.options[e.selectedIndex];
+    var w = e.value;
+    // removing unwanted characters from the palindrome
+    // make the string lowercase
+    var re = /[\W_]/g;
+    // console.log(w);    
+    var lowCaseRegEx = w.toLowerCase().replace(re, '');
+    // reverse the string here
+    var reverseStr = lowCaseRegEx.split('').reverse().join('');
+    fThree = (lowCaseRegEx === reverseStr);
+    if (fThree) {
+        document.getElementById("testAnswer3").innerHTML = "true";
+    } else {
+        document.getElementById("testAnswer3").innerHTML = "false";
+    }
+    console.log(fThree);
 }
 
 // console.log(fOne);
