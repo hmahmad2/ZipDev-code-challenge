@@ -77,6 +77,25 @@ function questionThree() {
     console.log(fThree);
 }
 
+function questionFour() {
+    var er = document.getElementById("formFourFirst").value;
+    var re = document.getElementById("formFourSecond").value;
+
+    // document.getElementById("testAnswer4").innerHTML = er;
+    var lowCase = /[\W_]/g;
+    var lowCaseER = er.toLowerCase().replace(lowCase, '');
+    var lowCaseRE = re.toLowerCase().replace(lowCase, '');
+
+    fFour = (lowCaseER === lowCaseRE);
+    document.getElementById("testAnswer4").innerHTML += er + " ";
+    document.getElementById("testAnswer4").innerHTML += re;
+    if (fFour) {
+        document.getElementById("testAnswer4").innerHTML += "<br />" + "true";
+    } else {
+        document.getElementById("testAnswer4").innerHTML += "<br />" + "false";
+    }
+}
+
 // console.log(fOne);
 
 // function questionLast() {
