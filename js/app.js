@@ -4,7 +4,7 @@ var fThree;
 var fFour;
 
 var countOne = 10;
-var countTwo = 20;
+var countTwo = 10;
 var interval1 = setInterval(function() {
     document.getElementById("count1").innerHTML = countOne;
     countOne--;
@@ -16,18 +16,18 @@ var interval1 = setInterval(function() {
     }
 }, 1000);
 
-var interval2 = setInterval(function() {
-    if (countTwo <= 10) {
-        document.getElementById("count2").innerHTML = countTwo;
-    }
-    countTwo--;
-    if (countTwo <= -1) {
-        clearInterval(interval2);
-        document.getElementById("count2").innerHTML = 'Done';
-        var e = document.getElementById("formTwo");
-        e.disabled = true;
-    }
-}, 1000);
+// var interval2 = setInterval(function() {
+//     if (countTwo <= 10) {
+//         document.getElementById("count2").innerHTML = countTwo;
+//     }
+//     countTwo--;
+//     if (countTwo <= -1) {
+//         clearInterval(interval2);
+//         document.getElementById("count2").innerHTML = 'Done';
+//         var e = document.getElementById("formTwo");
+//         e.disabled = true;
+//     }
+// }, 1000);
 
 
 function questionOne() {
@@ -70,9 +70,9 @@ function questionThree() {
     var reverseStr = lowCaseRegEx.split('').reverse().join('');
     fThree = (lowCaseRegEx === reverseStr);
     if (fThree) {
-        document.getElementById("testAnswer3").innerHTML = "true";
+        document.getElementById("testAnswer3").innerHTML = "True";
     } else {
-        document.getElementById("testAnswer3").innerHTML = "false";
+        document.getElementById("testAnswer3").innerHTML = "False";
     }
     console.log(fThree);
 }
@@ -90,9 +90,9 @@ function questionFour() {
     document.getElementById("testAnswer4").innerHTML += er + " ";
     document.getElementById("testAnswer4").innerHTML += re;
     if (fFour) {
-        document.getElementById("testAnswer4").innerHTML += "<br />" + "true";
+        document.getElementById("testAnswer4").innerHTML += "<br />" + "True";
     } else {
-        document.getElementById("testAnswer4").innerHTML += "<br />" + "false";
+        document.getElementById("testAnswer4").innerHTML += "<br />" + "False";
     }
 }
 
@@ -102,3 +102,119 @@ function questionFour() {
 //     document.getElementById("testAnswer3").innerHTML = fOne;
 // }
 
+var i = 0;
+function move1() {
+    if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 0;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width >= 25) {
+                clearInterval(id);
+                i = 25;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width  + "%";
+            }
+        }
+    }
+}
+
+function move2() {
+    if (i == 25) {
+        i = 26;
+        var elem = document.getElementById("myBar");
+        var width = 25;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width >= 50) {
+                clearInterval(id);
+                i = 50;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width  + "%";
+            }
+        }
+    }
+}
+
+function move3() {
+    if (i == 50) {
+        i = 51;
+        var elem = document.getElementById("myBar");
+        var width = 50;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width >= 75) {
+                clearInterval(id);
+                i = 75;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width  + "%";
+            }
+        }
+    }
+}
+
+function move4() {
+    if (i == 75) {
+        i = 76;
+        var elem = document.getElementById("myBar");
+        var width = 75;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                i = 100;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width  + "%";
+            }
+        }
+    }
+}
+
+function setVis1() {
+    document.getElementById("buttonTwo").style.visibility = "visible";
+    document.getElementById("part2").style.visibility = "visible";
+    document.getElementById("buttonOne").style.visibility = "hidden";
+    document.getElementById("part1").style.visibility = "hidden";
+    var interval2 = setInterval(function() {
+        if (countTwo <= 10) {
+            document.getElementById("count2").innerHTML = countTwo;
+        }
+        countTwo--;
+        if (countTwo <= -1) {
+            clearInterval(interval2);
+            document.getElementById("count2").innerHTML = 'Done';
+            var e = document.getElementById("formTwo");
+            e.disabled = true;
+        }
+    }, 1000);
+    
+}
+
+function setVis2() {
+    document.getElementById("buttonThree").style.visibility = "visible";
+    document.getElementById("part3").style.visibility = "visible";   
+    document.getElementById("buttonTwo").style.visibility = "hidden";
+    document.getElementById("part2").style.visibility = "hidden";
+}
+
+function setVis3() {
+    document.getElementById("buttonFour").style.visibility = "visible";
+    document.getElementById("part4").style.visibility = "visible";   
+    document.getElementById("buttonThree").style.visibility = "hidden";
+    document.getElementById("part3").style.visibility = "hidden";
+}
+
+function setVis4() {
+    document.getElementById("buttonFour").style.visibility = "hidden";
+    document.getElementById("part4").style.visibility = "hidden";
+    document.getElementById("submission").style.visibility = "visible";
+}

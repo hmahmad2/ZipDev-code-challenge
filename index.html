@@ -12,8 +12,13 @@
 </head>
 <body>
     <h1>ZipDev Coding Challenge</h1>
+    <div id="myProgress">
+        <div id="myBar">10%</div>
+    </div>
 
-    <form>
+    <!-- <button onclick="move()">Next</button> -->
+
+    <form id="part1">
         <label>
             How do you describe yourself as a developer?
             <select id="formOne">
@@ -25,8 +30,13 @@
             </select>
             <div id="count1">Start</div>
         </label>
-        <br />
-        <br />
+    </form>
+    <button id="buttonOne" onclick="move1(), setVis1()">Next</button>
+
+    <br />
+    <br />
+
+    <form id="part2">
         <label>
             Select the Javascript based technologies.
             <select id="formTwo">
@@ -38,34 +48,54 @@
             </select>
             <div id="count2"></div>
         </label>
-        <!-- <input type="submit" value="Submit" onclick="questionOne()" /> -->
-        <br />
-        <br />
+    </form>
+    <button id="buttonTwo" onclick="move2(), setVis2()">Next</button>
+    <!-- <input type="submit" value="Submit" onclick="questionOne()" /> -->
+    
+    <br />
+    <br />
+
+    <form id="part3">
         <label>
             Please input a palindrome.
             <textarea id="formThree"></textarea>
         </label>
-        <br />
-        <br />
+    </form>
+    <button id="buttonThree" onclick="move3(), setVis3()">Next</button>
+    
+    <br />
+    <br />
+
+    <form id="part4">
         <label>
             Please insert a sentence
             <textarea id="formFourFirst"></textarea>
+            <br />
             Repeat that sentence, but in reverse
             <textarea id="formFourSecond"></textarea>
         </label>
     </form>
+    <button id="buttonFour" onclick="move4(), setVis4()">Next</button>
     <!-- Putting the submit button outside the form allows
         the answer to persist and not go away in a split second -->
-    <input type="submit" value="Submit"
-        onclick="questionOne(), questionTwo(), questionThree(), questionFour()" />
+    
+    <br />
+    <br />
+
+    <input id="submission" type="submit" value="Submit"
+        onclick="questionOne(), questionTwo(),
+                questionThree(), questionFour()" />
 
     <br />
     <br />
+    <h6>Your results</h6>
     <span id=testAnswer1></span>
     <br />
     <p id=testAnswer2></p>
     <p id=testAnswer3></p>
     <p id=testAnswer4></p>
-
+    <br />
+    <br />
+    <h3>Select your favorite Sand Diego restaurant</h3>
 </body>
 </html>

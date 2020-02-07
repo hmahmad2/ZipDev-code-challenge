@@ -11,6 +11,22 @@ body {
     background-color: yellow;
 }
 
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+#part2, #part3, #part4, #submission {
+    visibility: hidden;
+}
+
+#buttonTwo, #buttonThree, #buttonFour {
+    visibility: hidden;
+}
 /* #testAnswer2 {
     /* TODO
     find a way to place an approval mark when the user
